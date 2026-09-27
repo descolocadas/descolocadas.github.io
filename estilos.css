@@ -1,86 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     background-color: #FAFAF8;
     color: #3A3A3A;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 15px;
 }
+
 h1 {
     text-align: center;
 }
+
 h2 {
-    margin-top: 50px;
+    margin-top: 40px;
 }
-/* POST-IT */
+
+/* POST-IT: Uso de Flexbox para auto-ajustarse en filas o columnas */
 .post_it {
     display: inline-block;
-    width: 160px;
+    width: calc(50% - 12px); /* 2 por fila en móvil */
+    max-width: 160px;
     min-height: 120px;
     padding: 16px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 4px;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
     text-align: left;
     transform: rotate(-3deg);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    vertical-align: top;
 }
+
 .post_it:nth-child(2) { transform: rotate(2deg); }
 .post_it:nth-child(3) { transform: rotate(-1deg); }
 .post_it:hover {
     transform: rotate(0deg) translateY(-6px);
     box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.2);
 }
+
 .amarillo { background-color: #FFF3B0; }
 .rosa     { background-color: #FFD6E8; }
 .azul     { background-color: #CDE7FF; }
 .verde    { background-color: #D5F2D0; }
+
 /* HORARIO */
 .horario {
     position: relative;
+    width: calc(100% - 30px);
     max-width: 400px;
-    margin: 0 auto 24px;
+    margin: 0 0 24px 30px; /* Margen izquierdo reservado para la línea */
     padding: 12px 16px;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .horario::before {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -20px;
     top: 0;
     bottom: -24px;
     width: 3px;
     background-color: #CDE7FF;
 }
+
 .horario:last-child::before {
     bottom: 50%;
 }
+
 .horario::after {
     content: "";
     position: absolute;
-    left: -28px;
+    left: -24px;
     top: 18px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #3A3A3A;
 }
+
 .horario:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
 .horario h3 {
     margin: 0 0 4px 0;
 }
+
 /* FLASHCARDS */
 .flashcard {
-    width: 420px;
-    height: 160px;
+    width: 100%;
+    max-width: 420px;
+    min-height: 140px;
     margin: 0 auto 20px auto;
-    padding: 24px;
+    padding: 20px;
     border-radius: 16px;
     background-color: #F1EAFB;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -90,9 +111,11 @@ h2 {
     justify-content: center;
     transition: box-shadow 0.25s ease;
 }
+
 .flashcard:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
+
 .flashcard p {
     opacity: 0;
     margin-top: 14px;
@@ -100,6 +123,15 @@ h2 {
     font-weight: bold;
     transition: opacity 0.3s ease;
 }
+
 .flashcard:hover p {
     opacity: 1;
+}
+
+/* PANTALLAS MUY PEQUEÑAS (MÓVILES STACK) */
+@media (max-width: 380px) {
+    .post_it {
+        width: 100%; /* 1 por fila en pantallas muy estrechas */
+        max-width: 100%;
+    }
 }
