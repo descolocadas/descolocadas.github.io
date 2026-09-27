@@ -1,8 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Creepster&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Schoolbell&family=UnifrakturMaguntia&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+.rojo { background-color: #ffadad; }
+.naranja { background-color: #ffd6a5; }
+.amarillo { background-color: #FFF3B0; }
+.verde { background-color: #D5F2D0; }
+.celeste { background-color: #CDE7FF; }
+.azul { background-color: #a0c4ff; }
+.rosa { background-color: #FFD6E8; }
+.blanco { background-color: #fffffc; }
+.gris { background-color: #d1cedb; }
+.negro { 
+    background-color: #202020;
+    color: #fffffc
+}
+
+.cursiva { font-family: 'Pacifico'}
+.gamer { font-family: 'Press Start 2P'}
+.gotico { font-family: 'UnifrakturMaguntia'}
+.comic { font-family: 'Schoolbell'}
+.elegante { font-family: 'Playfair Display'}
+.terror { font-family: 'Creepster'}
+.diario { font-family: 'Anton'}
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
@@ -43,11 +65,6 @@ h2 {
     transform: rotate(0deg) translateY(-6px);
     box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.2);
 }
-
-.amarillo { background-color: #FFF3B0; }
-.rosa     { background-color: #FFD6E8; }
-.azul     { background-color: #CDE7FF; }
-.verde    { background-color: #D5F2D0; }
 
 /* HORARIO */
 .horario {
@@ -103,7 +120,6 @@ h2 {
     margin: 0 auto 20px auto;
     padding: 20px;
     border-radius: 16px;
-    background-color: #F1EAFB;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
@@ -119,7 +135,6 @@ h2 {
 .flashcard p {
     opacity: 0;
     margin-top: 14px;
-    color: #6B3FA0;
     font-weight: bold;
     transition: opacity 0.3s ease;
 }
