@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Creepster&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Schoolbell&family=UnifrakturMaguntia&display=swap');
 
-*, *::before, *::after {
-    box-sizing: border-box;
+.rojo { 
+    background-color: #eabebe; 
+    color: #3a3a3a;
 }
-
-.rojo { background-color: #ffadad; }
-.naranja { background-color: #ffd6a5; }
-.amarillo { background-color: #FFF3B0; }
-.verde { background-color: #D5F2D0; }
-.celeste { background-color: #CDE7FF; }
-.azul { background-color: #a0c4ff; }
-.rosa { background-color: #FFD6E8; }
-.blanco { background-color: #fffffc; }
-.gris { background-color: #d1cedb; }
+.naranja { 
+    background-color: #f9debd; 
+    color: #3a3a3a;
+}
+.amarillo { 
+    background-color: #FFF3B0; 
+    color: #3a3a3a;
+}
+.verde { 
+    background-color: #D5F2D0; 
+    color: #3a3a3a;
+}
+.celeste { 
+    background-color: #CDE7FF; 
+    color: #3a3a3a;
+}
+.azul { 
+    background-color: #a0c4ff; 
+    color: #3a3a3a;
+}
+.rosa { 
+    background-color: #FFD6E8; 
+    color: #3a3a3a;
+}
+.blanco { 
+    background-color: #fffffc; 
+    color: #3a3a3a;
+}
+.violeta { 
+    background-color: #e5cff1; 
+    color: #3a3a3a;
+}
+.gris { 
+    background-color: #d1cedb; 
+    color: #3a3a3a;
+}
 .negro { 
-    background-color: #202020;
+    background-color: #3a3a3a;
     color: #fffffc
 }
 
@@ -25,6 +52,10 @@
 .elegante { font-family: 'Playfair Display'}
 .terror { font-family: 'Creepster'}
 .diario { font-family: 'Anton'}
+
+.pequenio { font-size: 0.9em; }
+.mediano { font-size: 1.1em; }
+.grande { font-size: 1.5em; }
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
@@ -43,11 +74,10 @@ h2 {
     margin-top: 40px;
 }
 
-/* POST-IT: Uso de Flexbox para auto-ajustarse en filas o columnas */
+/* POST-IT */
 .post_it {
     display: inline-block;
-    width: calc(50% - 12px); /* 2 por fila en móvil */
-    max-width: 160px;
+    width: 160px;
     min-height: 120px;
     padding: 16px;
     margin: 5px;
@@ -69,9 +99,8 @@ h2 {
 /* HORARIO */
 .horario {
     position: relative;
-    width: calc(100% - 30px);
-    max-width: 400px;
-    margin: 0 0 24px 30px; /* Margen izquierdo reservado para la línea */
+    width: 400px;
+    margin: 0 0 24px 30px;
     padding: 12px 16px;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -114,8 +143,7 @@ h2 {
 
 /* FLASHCARDS */
 .flashcard {
-    width: 100%;
-    max-width: 420px;
+    width: 420px;
     min-height: 140px;
     margin: 0 auto 20px auto;
     padding: 20px;
@@ -136,17 +164,10 @@ h2 {
     opacity: 0;
     margin-top: 14px;
     font-weight: bold;
+    font-size: 1.5em;
     transition: opacity 0.3s ease;
 }
 
 .flashcard:hover p {
     opacity: 1;
-}
-
-/* PANTALLAS MUY PEQUEÑAS (MÓVILES STACK) */
-@media (max-width: 380px) {
-    .post_it {
-        width: 100%; /* 1 por fila en pantallas muy estrechas */
-        max-width: 100%;
-    }
 }
