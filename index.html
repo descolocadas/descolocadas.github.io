@@ -12926,6 +12926,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
 </script>
 <script>
   const starter = `<!DOCTYPE html>
+<html>
 <head>
   
 </head>
@@ -12939,7 +12940,8 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
   <footer>
     
   </footer>
-</body>`;
+</body>
+</html>`;
 
   const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
     mode: 'htmlmixed',
